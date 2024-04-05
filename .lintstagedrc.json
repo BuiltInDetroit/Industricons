@@ -1,0 +1,4 @@
+{
+  "**/*.{js,ts}": ["prettier --cache --write", "eslint"],
+  "**/*.md": ["prettier --cache --write"]
+}

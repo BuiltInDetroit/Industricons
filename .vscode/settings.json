@@ -1,0 +1,86 @@
+{
+  "cSpell.words": [
+    "builtindetroit",
+    "commitlint",
+    "corepack",
+    "fantasticon",
+    "Industricons",
+    "spriter"
+  ],
+  "cSpell.ignorePaths": [
+    "LICENSE",
+    "LICENSE-CONTENT",
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders"
+  ],
+  "css.validate": false,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": false,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 100, 120],
+  "editor.wordWrapColumn": 120,
+  "files.associations": {
+    "tsconfig.json": "json",
+    ".eslintrc": "jsonc",
+    ".prettierrc": "jsonc",
+    ".eslintignore": "ignore"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.venv": true,
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  "less.validate": false,
+  "npm.packageManager": "pnpm",
+  "prettier.configPath": "./.prettierrc.json",
+  "prettier.ignorePath": ".prettierignore",
+  "scss.validate": false,
+  "search.exclude": {
+    "*.{css,sass,scss}.d.ts": true,
+    "**/CHANGELOG.json": true,
+    "**/CHANGELOG.md": true,
+    "**/node_modules": true,
+    "**/pnpm-lock.yaml": true,
+    "**/*.svg": true,
+    ".eslintcache": true,
+    ".stylelintcache": true,
+    ".git": true,
+    "node_modules": true,
+    "npm-debug.log.*": true,
+    "package-lock.json": true,
+    "pnpm-lock.yaml": true,
+    "main.css": true
+  },
+  "stylelint.packageManager": "pnpm",
+  "yaml.maxItemsComputed": 5000,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
+  }
+}

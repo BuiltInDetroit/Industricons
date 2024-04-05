@@ -1,0 +1,23 @@
+{
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "semi": true,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": true,
+  "plugins": ["prettier-plugin-organize-imports"],
+  "overrides": [
+    {
+      "files": "*.css",
+      "options": {
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "useTabs": false
+      }
+    }
+  ]
+}
