@@ -6,8 +6,8 @@
 import chalk from 'chalk';
 import { readFileSync } from 'fs-extra';
 import { join } from 'path';
-import { ProjectMetadataSchema } from './ProjectMetadataSchema.ts';
-import { getProjectRootPath } from './paths.ts';
+import { ProjectMetadataSchema } from './ProjectMetadataSchema';
+import { getProjectRootPath } from './paths';
 
 /**
  * Returns the data of the "meta.json" file for the project.

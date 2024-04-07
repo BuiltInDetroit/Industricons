@@ -21,18 +21,20 @@
   "scripts": {
     "build": "ts-node ./scripts/build.ts",
     "prepare": "husky install",
-    "serve": ""
+    "serve": "http-server ./dist"
   },
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "@types/eslint": "8.x",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "20.x",
+    "@types/svg-sprite": "^0.0.39",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/experimental-utils": "^5.62.0",
     "@typescript-eslint/parser": "^7.5.0",
-    "chalk": "^5.3.0",
+    "chalk": "^4.1.2",
     "cross-dirname": "^0.1.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",

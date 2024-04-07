@@ -9,9 +9,9 @@ import { mkdirSync, readFileSync, removeSync, writeFileSync } from 'fs-extra';
 import { basename, join } from 'path';
 import SVGSpriter from 'svg-sprite';
 import { Config as SvgoConfig, optimize } from 'svgo';
-import { getDirContentsInfo } from './getDirContentsInfo.ts';
-import { getProjectMetadata } from './getProjectMetadata.ts';
-import { getDistRootPath, getSrcRootPath } from './paths.ts';
+import { getDirContentsInfo } from './getDirContentsInfo';
+import { getProjectMetadata } from './getProjectMetadata';
+import { getDistRootPath, getSrcRootPath } from './paths';
 
 type GlyphCodepoint = number;
 
@@ -32,7 +32,7 @@ iconsSrcDirContentsInfo.baseFileNames.forEach((iconBaseFilename) => {
 	currentGlyphCodepoint += 1;
 });
 
-removeSync(getDistRootPath(), { recursive: true });
+removeSync(getDistRootPath());
 
 mkdirSync(getDistRootPath(), { recursive: true });
 

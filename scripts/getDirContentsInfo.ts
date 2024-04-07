@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 import chalk from 'chalk';
-import { readDirSync } from 'fs-extra';
+import { readdirSync } from 'fs-extra';
 import { join, parse } from 'path';
 
 type DirContentsInfo = {
@@ -35,9 +35,9 @@ export function getDirContentsInfo(absDirPath: string): DirContentsInfo {
 	const baseFileNames: string[] = [];
 	const fileNames: string[] = [];
 
-	for (const dirEntry of readDirSync(absDirPath)) {
-		const fileName = dirEntry.name;
-		const baseFileName = parse(fileName).name;
+	for (const dirEntry of readdirSync(absDirPath)) {
+		const fileName = parse(dirEntry).base;
+		const baseFileName = parse(dirEntry).name;
 
 		if (['.DS_Store', 'Thumbs.db'].includes(fileName)) {
 			continue;
