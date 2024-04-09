@@ -1,4 +1,6 @@
+/* eslint-disable header/header */
 /*---------------------------------------------------------------------------------------------
+ *  Copyright IBM Corp. 2018, 2018
  *  Copyright (c) Built In Detroit Project Contributors. All rights reserved.
  *  Licensed under the Apache 2.0 License.
  *--------------------------------------------------------------------------------------------*/

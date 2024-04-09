@@ -31,7 +31,11 @@ pnpm run serve
 
 ## Attributions
 
-The build scripts are adapted from the [IBM Carbon Project](https://carbondesignsystem.com) which is licensed under the Apache 2.0 License.
+The following are adapted from the [IBM Carbon Project](https://carbondesignsystem.com) which is licensed under the Apache 2.0 License:
+
+- Some build scripts under the top-level 'scripts' directory.
+- The master Adobe Illustrator template under the top-level 'master' directory.
+- The templates under the 'src/templates' directory.
 
 ## Licenses
 
