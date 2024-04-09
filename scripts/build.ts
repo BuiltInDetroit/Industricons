@@ -7,7 +7,7 @@
 
 import chalk from 'chalk';
 import { FontAssetType, OtherAssetType, generateFonts } from 'fantasticon';
-import { mkdirSync, readFileSync, removeSync, writeFileSync } from 'fs-extra';
+import { copyFileSync, mkdirSync, readFileSync, removeSync, writeFileSync } from 'fs-extra';
 import { basename, join } from 'path';
 import SVGSpriter from 'svg-sprite';
 import { Config as SvgoConfig, optimize } from 'svgo';
@@ -28,6 +28,8 @@ let currentGlyphCodepoint: GlyphCodepoint = 60000;
 const glyphCodepointsMapping: { [glyphName: string]: GlyphCodepoint } = {};
 
 const iconsSrcDirContentsInfo = getDirContentsInfo(absIconsSrcDirPath);
+
+const fontBaseName = 'industricon';
 
 iconsSrcDirContentsInfo.baseFileNames.forEach((iconBaseFilename) => {
 	glyphCodepointsMapping[iconBaseFilename] = currentGlyphCodepoint;
@@ -98,7 +100,7 @@ function optimizeSvgFile(
 const projectPackageJsonData = getProjectMetadata();
 
 generateFonts({
-	name: 'industricon',
+	name: fontBaseName,
 	fontTypes: [FontAssetType.TTF],
 	assetTypes: [OtherAssetType.CSS, OtherAssetType.HTML],
 	formatOptions: {
@@ -113,20 +115,30 @@ generateFonts({
 	},
 	codepoints: glyphCodepointsMapping,
 	normalize: true,
-	prefix: 'industricon',
+	prefix: fontBaseName,
 	inputDir: absDistLibPath,
 	outputDir: getDistRootPath(),
-}).catch((err) =>
-	console.error(
-		chalk.bold.red(
-			`Could not generate the font assets and related assets for the SVG files: ${err}`
+})
+	.catch((err) =>
+		console.error(
+			chalk.bold.red(
+				`Could not generate the font assets and related assets for the SVG files: ${err}`
+			)
 		)
 	)
-);
+	.then((_) => {
+		const iconGalleryOriginalHtmlFilePath = join(getDistRootPath(), `${fontBaseName}.html`);
+		const iconGalleryIndexHtmlFilePath = join(getDistRootPath(), 'index.html');
+
+		// Add 'index.html' copy of 'industricon.html' output from the Fantasticon
+		// generation process so that local HTTP servers and GitHub Pages picks it up
+		// immediately.
+		copyFileSync(iconGalleryOriginalHtmlFilePath, iconGalleryIndexHtmlFilePath);
+	});
 
 const spriter = new SVGSpriter({
 	mode: {
-		symbol: { dest: getDistRootPath(), sprite: 'industricon.svg' },
+		symbol: { dest: getDistRootPath(), sprite: `${fontBaseName}.svg` },
 	},
 });
 
