@@ -35,7 +35,6 @@ The following are adapted from the [IBM Carbon Project](https://carbondesignsyst
 
 - Some build scripts under the top-level 'scripts' directory.
 - The master Adobe Illustrator template under the top-level 'master' directory.
-- The templates under the 'src/templates' directory.
 
 ## Licenses
 
