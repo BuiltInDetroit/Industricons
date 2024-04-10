@@ -2,10 +2,6 @@
 
 **Icons for industrial applications and more.**
 
-## Overview
-
-TODO: Add documentation here.
-
 ## Development
 
 ### Setup
@@ -29,12 +25,22 @@ To launch a local server to preview the icons, run:
 pnpm run serve
 ```
 
+The icon gallery website can be then viewed locally by visiting [http://127.0.0.1:8080](http://127.0.0.1:8080).
+
 ## Attributions
 
-The following are adapted from the [IBM Carbon Project](https://carbondesignsystem.com) which is licensed under the Apache 2.0 License:
+This project started out as a fork of the [IBM Carbon Project](https://carbondesignsystem.com) icons - an excellent set of general-purpose
+icons representing various user actions, everyday objects and representations of technology. Icons that represent IBM branding and IBM-specific
+products have been removed from the set.
 
-- Some build scripts under the top-level 'scripts' directory.
-- The master Adobe Illustrator template under the top-level 'master' directory.
+Industricons add to this set by, primarily, incorporating icons representing various industrial and manufacturing objects and roles with a similar design style.
+
+The [IBM Carbon Project](https://carbondesignsystem.com) is licensed under the Apache 2.0 License.
+
+Changes to the IBM Carbon Project include:
+
+- Removed icons that represent IBM branding and IBM-specific products.
+- Some parts of the build scripts under the top-level 'scripts' directory were ported over to TypeScript and reused.
 
 ## Licenses
 
